@@ -1,4 +1,4 @@
-from itertools import permutations
+from itertools import combinations
 
 
 def read_input():
@@ -14,7 +14,7 @@ def find_two(entries):
 
 
 def find_three(entries):
-    for group in permutations(entries, 3):
+    for group in combinations(entries, 3):
         if sum(group) == 2020:
             return group[0]*group[1]*group[2]
 
